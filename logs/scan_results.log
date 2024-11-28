@@ -1,0 +1,16 @@
+
+
+=== Scan Started ===
+Timestamp: 2024-11-28 11:27:33 | Target IP: 127.0.0.1 | Port Range: 8080-10000
+
+Scan ID: 1 | Timestamp: 2024-11-28 11:27:33 | IP: 127.0.0.1 | Port: 8080 | Status: OPEN
+Scan ID: 2 | Timestamp: 2024-11-28 11:27:33 | IP: 127.0.0.1 | Port: 9090 | Status: OPEN
+Scan ID: 3 | Timestamp: 2024-11-28 11:27:33 | IP: 127.0.0.1 | Port: 10000 | Status: OPEN
+
+=== Scan Started ===
+Timestamp: 2024-11-28 11:28:03 | Target IP: scanme.nmap.org | Port Range: 20-50
+
+
+=== Scan Started ===
+Timestamp: 2024-11-28 11:28:32 | Target IP: 64.13.134.52 | Port Range: 20-50
+

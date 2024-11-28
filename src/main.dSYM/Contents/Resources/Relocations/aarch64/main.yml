@@ -1,0 +1,9 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/gonzalofernandezdecordoba/Desktop/Programming/project_port_scanner/src/main'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _scan_ports, symObjAddr: 0x0, symBinAddr: 0x100003BF0, symSize: 0x188 }
+  - { offsetInCU: 0x7B, offset: 0x7B, size: 0x8, addend: 0x0, symName: _scan_ports, symObjAddr: 0x0, symBinAddr: 0x100003BF0, symSize: 0x188 }
+  - { offsetInCU: 0xE5, offset: 0xE5, size: 0x8, addend: 0x0, symName: __OSSwapInt16, symObjAddr: 0x188, symBinAddr: 0x100003D78, symSize: 0x24 }
+  - { offsetInCU: 0x10D, offset: 0x10D, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1AC, symBinAddr: 0x100003D9C, symSize: 0x100 }
+...
