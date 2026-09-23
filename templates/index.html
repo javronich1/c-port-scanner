@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Port Scanner</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Port Scanner</h1>
+        <form id="scannerForm">
+            <input type="text" id="target" placeholder="Enter Target IP or Domain (e.g., 127.0.0.1 or example.com)" required />
+            <input type="number" id="start_port" placeholder="Enter Start Port (e.g., 8080)" required />
+            <input type="number" id="end_port" placeholder="Enter End Port (e.g., 10000)" required />
+            <button type="submit">Start Scan</button>
+        </form>
+        <div id="results"></div>
+        <footer>
+            Built with ❤️ by GROUP 7
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('scannerForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const target = document.getElementById('target').value;
+            const start_port = document.getElementById('start_port').value;
+            const end_port = document.getElementById('end_port').value;
+
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = `<p style="color: #0078d7;">Scanning...</p>`;
+
+            try {
+                const response = await fetch('/scan', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ target, start_port, end_port })
+                });
+
+                const result = await response.json();
+
+                if (result.error) {
+                    resultsDiv.innerHTML = `<p style="color: red;">Error: ${result.error}</p>`;
+                } else {
+                    resultsDiv.innerHTML = `<pre>${result.output}</pre>`;
+                }
+            } catch (error) {
+                resultsDiv.innerHTML = `<p style="color: red;">Failed to fetch results. Please try again later.</p>`;
+            }
+        });
+    </script>
+</body>
+</html>

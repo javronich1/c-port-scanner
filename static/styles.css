@@ -1,0 +1,93 @@
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Main Container */
+        .container {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            padding: 20px;
+        }
+
+        /* Header */
+        h1 {
+            text-align: center;
+            color: #0078d7;
+        }
+
+        /* Input Fields and Button */
+        input, button {
+            width: 95%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        input:focus {
+            border-color: #0078d7;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 120, 215, 0.3);
+        }
+
+        button {
+            background-color: #0078d7;
+            color: white;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        /* Results Section */
+        #results {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: monospace;
+        }
+
+        #results p {
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        footer a {
+            color: #0078d7;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
